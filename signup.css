@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "roboto";
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 50px;
+}
+
+img {
+  height: 100vh;
+  width: 55%;
+}
+
+input,
+label {
+  width: 450px;
+  height: 50px;
+  outline: none;
+  /* rgba ichidagi 4chi qiymat opacityga beriladi */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  padding-inline-start: 20px;
+  padding-block: 23px;
+}
+
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  /* background-color: #f9f9f9;  */
+}
+
+button {
+  width: 450px;
+  height: 60px;
+  background: #1da1f2;
+  border-radius: 76px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffffff;
+  border: 1px solid #1da1f2;
+  color: #1da1f2;
+}
+
+p {
+  font-size: 18px;
+  color: #1da1f2;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* margin-top: 50px; */
+}
