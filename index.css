@@ -26,6 +26,12 @@ body {
   font-weight: 900;
 }
 
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 input {
   width: 450px;
   height: 70px;

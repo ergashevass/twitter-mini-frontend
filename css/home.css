@@ -10,7 +10,15 @@ body {
   height: auto;
 }
 
-.dark{
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dark {
   background: #15202b;
   color: white;
 }
@@ -18,6 +26,20 @@ body {
 .container {
   display: flex;
   align-items: flex-start; /* Align items to the start */
+}
+
+#modalava {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.avatar-1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ddd; /* Agar rasm bo‘lmasa, fon rangi bo‘lsin */
 }
 
 .right {
@@ -42,7 +64,7 @@ body {
 .email {
   font-weight: 400;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.6);
+  color: grey;
 }
 
 .right .topp div {
@@ -53,7 +75,7 @@ body {
   gap: 20px;
 }
 
-.topp div a{
+.topp div a {
   text-decoration: none;
   color: black;
 }
@@ -94,6 +116,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .footerr {
@@ -105,8 +128,8 @@ body {
   font-size: 18px;
 }
 
-.footerr i:hover{
-     color: #1da1f2;
+.footerr i:hover {
+  color: #1da1f2;
   cursor: pointer;
   text-shadow: 0px 4px 10px rgba(29, 161, 242, 0.5);
 }
@@ -127,7 +150,6 @@ body {
 .left {
   margin-left: 25%; /* Ensure the left section starts after the fixed right section */
   width: 75%;
-
 }
 
 .nav {
@@ -153,14 +175,13 @@ body {
   text-shadow: 0px 4px 10px rgba(29, 161, 242, 0.5);
 }
 
-
-.icon{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.boxx{
+.boxx {
   padding: 10px 30px 21px 20px;
   display: flex;
   align-items: center;
@@ -169,58 +190,62 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.box-top{
+.box-top {
   display: flex;
-align-items: center;
-justify-content: space-between;
-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.box-top > div{
+.box-top > div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.name-1{
+.name-1 {
   font-weight: 700;
   font-size: 20px;
 }
 
-.email-1{
+.email-1 {
   font-weight: 400;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
 }
 
-.user-info-1{
+.user-info-1 {
   font-weight: 400;
   font-size: 18px;
 }
 
-.box-bottom{
+.box-bottom {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.box-bottom i{
+.box-bottom i {
   font-size: 20px;
   cursor: pointer;
 }
 
-.imageOta{
+.imageOta {
+  width: 100%; /* Box width */
+  /* max-width: 500px; Maksimal kenglik */
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px; /* Burchaklarni yumaloq qilish */
 }
 
-.image{
-  width: 679px;
-height: 453px;
-border-radius: 20px;
-
+.imageOta .image {
+  width: 100%; /* Box ichiga to‘liq sig‘adi */
+  height: auto; /* Nisbat saqlanadi */
+  max-height: 400px; /* Juda katta bo‘lib ketmasligi uchun */
+  object-fit: contain; /* Rasm siqilmasdan sig‘ishi uchun */
+  border-radius: 15px; /* Rasm burchaklarini yumaloq qilish */
 }
 
 /* The Modal (background) */
@@ -232,23 +257,23 @@ border-radius: 20px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-#myModal{
-display: none;
+#myModal {
+  display: none;
 }
 
 /* Modal Content/Box */
 #modalbir {
   background-color: rgba(245, 245, 245, 0.9); /* Qoraroq shaffof fon */
   backdrop-filter: blur(50px); /* Xiralik effekti */
-  margin-block: 8%; 
-  margin-inline-start: 29%;
+  margin-block: 8%;
+  margin-inline-start: 25%;
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.4); /* Yorug'roq chegara */
-  width: 67%; 
+  width: 67%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -256,23 +281,21 @@ display: none;
   color: white; /* Matn oq rangda ko'rinishi uchun */
 }
 
-
-
-.modal-content > div{
+.modal-content > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
 
-#btn-input{
+#btn-input {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.tweet{
+.tweet {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,30 +309,30 @@ display: none;
   color: rgb(225, 221, 221);
 }
 
-.tweet:hover{
+.tweet:hover {
   background: #1da1f2;
   color: white;
   cursor: pointer;
 }
 
-.img-input{
+.img-input {
   display: none;
 }
 
-#im-file i{
+#im-file i {
   margin-left: 10px;
   font-size: 26px;
   color: rgba(0, 0, 0, 0.6);
 }
 
-.modal-top{
+.modal-top {
   width: 100%;
 }
 
-.what{
+.what {
   font-weight: 600;
   font-size: 20px;
-  color: grey;
+  color: rgb(0, 0, 0);
   width: 100%;
   height: 50px;
   outline: none;
@@ -317,11 +340,10 @@ display: none;
   background: inherit;
 }
 
-#im-file i:hover{
+#im-file i:hover {
   color: #1da1f2;
   cursor: pointer;
   text-shadow: 0px 4px 10px rgba(29, 161, 242, 0.5);
-  
 }
 
 /* The Close Button */
@@ -337,4 +359,146 @@ display: none;
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.red-heart {
+  color: red;
+}
+/* MODAL umumiy */
+#comment-modal {
+  display: none; /* Modal defaultda yopiq */
+  position: fixed;
+  top: 50%;
+  left: 62%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#comment-modal.show {
+  display: block; /* Ochilish uchun */
+}
+
+#comment-text {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  outline-color: #007bff;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+   border: 1px solid grey;
+}
+
+/* MODAL ichidagi content */
+#modalll {
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+ 
+}
+
+/* Animatsiya */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Yopish tugmasi */
+.close-btn {
+  cursor: pointer;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Foydalanuvchi profili */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Komment maydoni */
+textarea {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Yuborish tugmasi */
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Kommentlar ro‘yxati */
+#comments-list {
+  margin-top: 10px;
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#comments-list p {
+  background: #f1f1f1;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.comment-avatar{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.comment{
+  display: flex;
+  align-items: start ;
+  gap: 6px;
+}
+
+.no-comments {
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+  margin-top: 10px;
+}
+.error-message {
+  text-align: center;
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
 }

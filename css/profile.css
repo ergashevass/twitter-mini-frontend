@@ -338,3 +338,26 @@ display: none;
   text-decoration: none;
   cursor: pointer;
 }
+
+.musli{
+    width: 120px;
+    height: 120px;
+}
+
+.nav > div{
+    display: flex;  
+    align-items: center;
+    gap: 20px;
+}
+
+.nav > div h3{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav > div p{
+    font-weight: 400;
+    font-size: 16px;
+    color: grey;
+}
+
